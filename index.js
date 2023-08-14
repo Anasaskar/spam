@@ -12,4 +12,34 @@ new userAccount(client, Discord).leveling({
     time: 1, 
     type: 'ar' 
 });
+new userAccount(client, Discord).leveling({
+    channel: '1140704510604476438',
+    randomLetters: false, 
+    time: 1, 
+    type: 'eng' 
+});
+new userAccount(client, Discord).leveling({
+    channel: '1140704510604476438',
+    randomLetters: false, 
+    time: 1, 
+    type: 'ar' 
+});
+new userAccount(client, Discord).leveling({
+    channel: '1140707742747734118',
+    randomLetters: false, 
+    time: 1, 
+    type: 'ar' 
+});
+new userAccount(client, Discord).leveling({
+    channel: '1140707742747734118',
+    randomLetters: false, 
+    time: 1, 
+    type: 'ar' 
+});
+new userAccount(client, Discord).leveling({
+    channel: '1140707742747734118',
+    randomLetters: false, 
+    time: 1, 
+    type: 'eng' 
+});
 client.login(process.env.token);
