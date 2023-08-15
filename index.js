@@ -5,41 +5,16 @@ const client = new Discord.Client({
 client.on('ready', async () => {
   console.log(`${client.user.username} is ready!`);
 })
-const {userAccount} = require("sphinx-run");
-new userAccount(client, Discord).leveling({
-    channel: '1140704510604476438',
-    randomLetters: false, 
-    time: 1, 
-    type: 'ar' 
-});
-new userAccount(client, Discord).leveling({
-    channel: '1140704510604476438',
-    randomLetters: false, 
-    time: 1, 
-    type: 'eng' 
-});
-new userAccount(client, Discord).leveling({
-    channel: '1140704510604476438',
-    randomLetters: false, 
-    time: 1, 
-    type: 'ar' 
-});
-new userAccount(client, Discord).leveling({
-    channel: '1140707742747734118',
-    randomLetters: false, 
-    time: 1, 
-    type: 'ar' 
-});
-new userAccount(client, Discord).leveling({
-    channel: '1140707742747734118',
-    randomLetters: false, 
-    time: 1, 
-    type: 'ar' 
-});
-new userAccount(client, Discord).leveling({
-    channel: '1140707742747734118',
-    randomLetters: false, 
-    time: 1, 
-    type: 'eng' 
+
+const words = ["كسمك", "يا قواد يا خول" , "يلعن كسمك", " انيك ام ام امك", "يبن الزانيه", "يا عرص يا نتفه", "يا ابن القحبه", "يلعن ابوك يل قواد", "يكسمك", "اقول حرك يبن القحبه يعرص", "يلعن كسمك بس", "ههههه كسمك يبن الشرموطه", "لذي الدرجه محروق كعب انس عالي عليك يبن القحبه صح ؟", "ويسكي ابن الشرموطه لحقوا عليه امك تنناك @here" , "بلله زبي ما ورم حلقك يبن المتناكه ؟؟؟","يلا يلعن كسمك", "يبن النتفه يا متناك يخول", "يلا يبن اازب الصومالي يخول", "كان زب بكستناي نط علي امك يبن القحبه جبلنا الخلقه بنت المتناكه دي", "اص اص مسويلي فري يبن المتناكه تعال", "انيك ام ام ام ام امك", "يلا ختففو علي وجه كسمك يبن المتناكه ", "شاهد كسم ويسكي المحلوق @here"];
+
+
+client.on('message', message => {
+    if (message.content.toLowerCase() === 'يلا يلعن كسمك') {
+        setInterval(() => {
+            const randomWord = words[Math.floor(Math.random() * words.length)];
+            message.channel.send(randomWord);
+        }, 100); 
+    }
 });
 client.login(process.env.token);
